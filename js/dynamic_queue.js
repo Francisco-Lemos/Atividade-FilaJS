@@ -15,7 +15,7 @@ class DynamicQueue {
         } else {// Em caso contrário pegamos o elemento do rabo(tail) e fazemos com que aponte para o novo nó a ser inserido
             this.tail.next = newnode;
         }
-        this.tail = newnode;//Agora é importante dizer que em qualquer caso (estando vazio ou não) o novo nó ficará no rabo(tail)
+        this.tail = newnode;//Agora é importante dizer que em qualquer caso (estando vazia ou não a lista) o novo nó ficará no rabo(tail)
     }
     dequeue() {/* Esse método irá retirar um elemento da fila.... COmo sabemos como a fila funciona, não precisamos saber quem... 
         então nada de parâmetros por aqui*/
