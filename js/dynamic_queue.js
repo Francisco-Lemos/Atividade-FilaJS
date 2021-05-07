@@ -2,15 +2,15 @@ class DynamicQueue {
     constructor() {/*Aqui o nosso construtor irá inicializar as nossos attributos cabeça e rabo
         Cabeça porque a fila tem um início poderia ser então start e tail pq tem também fim que poderia ser tb end
         Ai vai o gosto de cada um... Importante ressaltar que ambos começam com null, pois quando instanciada e nossa 
-         fila ainda estpa vazia*/
+         fila ainda está vazia*/
         this.head = null;
         this.tail = null;
     }
     enqueue(element) {/* Esse método irá adicionar um novo elemento na fila, cujo conteúdo irá corresponder ao valor fornecido
         como argumento*/
         const newnode = new Node(element);/* Instanciamos assim um novo nó (pois a fila é dinâmica), sendo esta composta pelos
-        atributos content e next*/
-        if (this.isEmpty()) {/* Caso a fila esteja vazia (isso que esse método verifica), adicionamos o novo elemento na cabeça*/
+        atributos content e next. O content será iniciado pelo valor contido em elemento*/
+        if (this.isEmpty()) {/* Caso a fila esteja vazia (isso que esse if verifica), adicionamos o novo elemento na cabeça*/
             this.head = newnode;
         } else {// Em caso contrário pegamos o elemento do rabo(tail) e fazemos com que aponte para o novo nó a ser inserido
             this.tail.next = newnode;
